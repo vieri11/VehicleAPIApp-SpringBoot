@@ -67,9 +67,7 @@ class CarController {
     )
     Resource<Car> get(@PathVariable Long id) {
 
-        System.out.println("id: " + id);
         Car car = carService.findById(id);
-
         return assembler.toResource(car);
     }
 
